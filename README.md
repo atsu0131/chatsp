@@ -52,7 +52,7 @@ Please feel free to use a different markup language if you do not plan to run
 ## usersテーブル
 
 |Column|Type|Options|
-|------|----|-------|
+|------|--------------|-------|
 |user_id|integer|null: false, foreign_key: true|
 |user_name|string|null: false, foreign_key: true|
 
@@ -65,7 +65,7 @@ Please feel free to use a different markup language if you do not plan to run
 ## messagesテーブル
 
 |Column|Type|Options|
-|------|----|-------|
+|------|---------------|-------|
 |user_id|integer|null: false, foreign_key: true|
 |messages|text|null: false, foreign_key: true|
 |image|string|null: false, foreign_key: true|
