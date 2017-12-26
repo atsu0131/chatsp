@@ -26,3 +26,53 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+## membersテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+
+### Association
+- belongs_to :group
+- belongs_to :users
+
+## groupテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|group_id|integer|null: false, foreign_key: true|
+|group_name|string|null: false, foreign_key: true|
+
+### Association
+- has_many :members
+- has_many :users
+
+## usersテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|user_name|string|null: false, foreign_key: true|
+
+### Association
+- belongs_to :group
+- has_many :members
+- has_many :messages
+
+
+## messagesテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|messages|text|null: false, foreign_key: true|
+|image|string|null: false, foreign_key: true|
+
+### Association
+- belongs_to :group
+- belongs_to :users
+- belongs_to :members
+
+
