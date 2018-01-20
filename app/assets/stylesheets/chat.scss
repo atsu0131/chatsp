@@ -3,8 +3,8 @@ body, html,{
   height: 100%;
 }
 .notification{
-  color: #000;
-  background: #FFF;
+  color: $notification;
+  background-color: $notification_back;
 }
 .left-side{
   width:300px;
@@ -27,7 +27,7 @@ body, html,{
 }
 .username-icon{
   display: inline-block;
-  float: right;
+  float:right;
   padding:40px;
 }
 .icon-write{
@@ -67,7 +67,7 @@ body, html,{
     width:250px
   }
 .right-side{
-  width: calc(100% - 300px);
+  width:calc(100% - 300px);
   height:100%;
   float:right;
 }
@@ -104,7 +104,7 @@ body, html,{
 .header-right{
   border: 1px solid #38AEF0;
   color: #38AEF0;
-  float: right;
+  float:right;
   height: 40px;
   line-height: 40px;
   padding: 0px 20px;
@@ -131,7 +131,7 @@ body, html,{
     color: #999;
     font-size: 12px;
     padding-left: 10px;
-    float: left;
+    float:left;
   }
 
   .lower-messages{
@@ -161,7 +161,7 @@ body, html,{
   }
   .form-icon{
     background-color: white;
-    color:black;
+    color: black;
     float:left;
     padding:10px 20px 16px 20px;
   }
