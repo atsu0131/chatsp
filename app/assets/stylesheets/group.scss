@@ -1,3 +1,7 @@
+$color: #38aef0;
+$color2: #f05050;
+$color3: #fff;
+
 .chat-group-form {
   width: 980px;
   margin: 60px auto;
@@ -14,7 +18,7 @@
     text-align: center;
   }
 
-  .chat-group-form__errors {
+  &_errors {
     margin: 30px 0;
     padding: 20px 40px;
     border: 1px solid #ddd;
@@ -40,7 +44,7 @@
     }
   }
 
-  .chat-group-form__field {
+  &__field {
     margin-top: 30px;
     &:after {
       content: "";
@@ -48,7 +52,7 @@
       display: block;
     }
 
-    &.chat-group-form__field--left {
+    &--left {
       float: left;
       width: 30%;
       padding-right: 20px;
@@ -56,19 +60,19 @@
       box-sizing: border-box;
     }
 
-    &.chat-group-form__field--right {
+    &--right {
       float: right;
       width: 70%;
     }
 
-    &.chat-group-form__label {
+    &__label {
       display: block;
       line-height: 50px;
       font-weight: bold;
       text-align: right;
     }
 
-    &.chat-group-form__input {
+    &__input {
       float: left;
       width: 100%;
       line-height: 30px;
@@ -88,29 +92,29 @@
       display: block;
     }
 
-    &.chat-group-user__name {
+    &__name {
       float: left;
     }
 
-    &.chat-group-user__btn {
+    &__btn {
       float: right;
       display: inline-block;
       cursor: pointer;
 
-      &.chat-group-user__btn--add {
-        color: #38aef0;
+      &__btn--add {
+        color: $color;
       }
 
-      &.chat-group-user__btn--remove {
-        color: #f05050;
+      &__btn--remove {
+        color: $color2;
       }
     }
   }
 
-  .chat-group-form__action-btn {
+  &__action-btn {
     display: inline-block;
     padding: 12px 20px;
-    color: #fff;
+    color: $color3;
     background-color: #38aef0;
     border: 0;
   }
