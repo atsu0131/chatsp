@@ -1,12 +1,14 @@
 $btn: #fff;
 $label: #d65f4c;
+$send-button: #38aef0;
+$input: #d65f4c;
 
 .account-page {
   &__inner {
     width: 980px;
     margin: 60px auto;
     padding: 60px;
-    background-color: #fff;
+    background-color: $btn;
     border: 1px solid #ddd;
     border-radius: 5px;
 
@@ -45,7 +47,7 @@ $label: #d65f4c;
 
     .btn {
       margin-top: 20px;
-      color: #fff;
+      color: $btn;
       background-color: #ccc;
       font-size: 14px;
     }
@@ -89,7 +91,7 @@ $label: #d65f4c;
     float: left;
     margin-top: 20px;
     color: $btn;
-    background-color: #38aef0;
+    background-color: $send-button;
   }
 
   .field-label {
@@ -112,7 +114,7 @@ $label: #d65f4c;
         right: 0;
         bottom: 0;
         width: 5px;
-        background-color: #d65f4c;
+        background-color: $input;
       }
     }
   }
