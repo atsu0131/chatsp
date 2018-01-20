@@ -1,6 +1,6 @@
-$color: #38aef0;
-$color2: #f05050;
-$color3: #fff;
+$send-button: #38aef0;
+$remove: #f05050;
+$btn: #fff;
 
 .chat-group-form {
   width: 980px;
@@ -102,11 +102,11 @@ $color3: #fff;
       cursor: pointer;
 
       &__btn--add {
-        color: $color;
+        color: $send-button;
       }
 
       &__btn--remove {
-        color: $color2;
+        color: $remove;
       }
     }
   }
@@ -114,8 +114,8 @@ $color3: #fff;
   &__action-btn {
     display: inline-block;
     padding: 12px 20px;
-    color: $color3;
-    background-color: #38aef0;
+    color: $btn;
+    background-color: $send-button;
     border: 0;
   }
 }

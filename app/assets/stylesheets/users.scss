@@ -1,7 +1,5 @@
-$color: #38aef0;
-$color2: #f05050;
-$color3: #fff;
-$color4: #d65f4c;
+$btn: #fff;
+$label: #d65f4c;
 
 .account-page {
   &__inner {
@@ -12,7 +10,7 @@ $color4: #d65f4c;
     border: 1px solid #ddd;
     border-radius: 5px;
 
-    &__inner--left, .account-page__inner--right {
+    &--left, .account-page__inner--right {
       float: left;
       width: 50%;
     }
@@ -90,14 +88,14 @@ $color4: #d65f4c;
   input[type='submit'] {
     float: left;
     margin-top: 20px;
-    color: $color3;
+    color: $btn;
     background-color: #38aef0;
   }
 
   .field-label {
     .field_with_errors {
       display: inline-block;
-      color: $color4;
+      color: $label;
       font-weight: 400;
     }
   }
@@ -128,7 +126,7 @@ $color4: #d65f4c;
 
   h2 {
     margin-bottom: 10px;
-    color: $color4;
+    color: $label;
     font-size: 14px;
   }
 
