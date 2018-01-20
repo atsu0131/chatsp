@@ -1,14 +1,9 @@
-$btn: #fff;
-$label: #d65f4c;
-$send-button: #38aef0;
-$input: #d65f4c;
-
 .account-page {
   &__inner {
     width: 980px;
     margin: 60px auto;
     padding: 60px;
-    background-color: $btn;
+    background-color: $white;
     border: 1px solid #ddd;
     border-radius: 5px;
 
@@ -47,7 +42,7 @@ $input: #d65f4c;
 
     .btn {
       margin-top: 20px;
-      color: $btn;
+      color: $white;
       background-color: #ccc;
       font-size: 14px;
     }
@@ -90,14 +85,14 @@ $input: #d65f4c;
   input[type='submit'] {
     float: left;
     margin-top: 20px;
-    color: $btn;
+    color: $white;
     background-color: $send-button;
   }
 
   .field-label {
     .field_with_errors {
       display: inline-block;
-      color: $label;
+      color: $input;
       font-weight: 400;
     }
   }
@@ -128,7 +123,7 @@ $input: #d65f4c;
 
   h2 {
     margin-bottom: 10px;
-    color: $label;
+    color: $input;
     font-size: 14px;
   }
 
