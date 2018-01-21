@@ -1,0 +1,29 @@
+.notification
+.left-side
+  = render 'shared/side_bar'
+.right-side
+  .header
+    .header-left
+      %p.name1 グループ名
+      %p.name Member：
+      .header-right
+        %p Edit
+  .middle
+    .messages
+      .upper-messages
+        .upper-messages-user
+          %p グループ
+        .upper-messages-date
+          %p 2017/12/26 05:47
+      .lower-messages
+        %p メッセージ２
+  .footer
+    .write
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        = f.label :image, class: 'form-icon__image' do
+          = fa_icon 'picture-o', class: 'icon'
+          = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
+        / .send
+        /   = render @messages
