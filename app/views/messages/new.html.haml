@@ -8,8 +8,9 @@
     %p.name Member：
     .header-right
       %p Edit
-  .main
-    = render @messages
+  .main-wide
+    .main
+      = render @messages
   .footer
     .write
       = form_for [@group, @message] do |f|
@@ -18,5 +19,3 @@
           = fa_icon 'picture-o', class: 'icon-image'
           = f.file_field :image, class: 'hidden'
         = f.submit 'Send', class: 'form__submit'
-        / .send
-        /   = render @messages
