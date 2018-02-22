@@ -31,6 +31,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'pry-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -38,7 +43,6 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.5'
   gem 'rails-controller-testing'
   gem "factory_girl_rails", "~> 4.0"
-  gem 'pry-rails'
 end
 
 group :development do
@@ -51,11 +55,6 @@ end
 gem 'devise'
 gem "font-awesome-rails"
 gem 'haml-rails'
-gem 'carrierwave'
-gem 'mini_magick'
-gem 'carrierwave'
-gem 'mini_magick'
-gem 'pry-rails'
 group :test do
   gem 'faker'
 end
