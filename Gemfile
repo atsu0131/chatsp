@@ -33,18 +33,15 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 gem 'carrierwave'
 gem 'mini_magick'
-gem 'carrierwave'
-gem 'mini_magick'
 gem 'pry-rails'
-
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'rspec-rails', '~> 3.5'
   gem 'rails-controller-testing'
-  gem "factory_girl_rails", "~> 4.0"
+  #gem "factory_girl_rails", "~> 4.0"
+  gem "factory_bot_rails"
 end
-
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
