@@ -143,19 +143,45 @@
 .user-search-add{
   color:blue;
 }
-.name-result{
-  width:300px;
-  display: inline-block;
-}
+
+
 .id-result{
   width:390px;
 }
 
-.chat-group-user__name{
-  padding:0px 8px 0px 8px;
+.name-result{
+  display: inline-block;
 }
 
-.name-display{
-  float: left;
-  padding:0px 8px 0px 8px;
+.search-result{
+  witdh: 300px;
+  .name-display{
+    width: 300px;
+    display: inline-block;
+  }
 }
+
+.user-search-remove{
+  color:red;
+}
+
+.chat-group-user__name{
+  width:500px;
+}
+
+.chat-group-user-22{
+      width:370px;
+  display: inline-block;
+  &--current{
+    &:after {
+    clear: both;
+    content: "";
+    display: block;
+    }
+  }
+}
+
+
+
+
+
