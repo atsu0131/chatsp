@@ -42,14 +42,14 @@ $(document).delegate('a','click',function(){
       dataType: 'json'
     })
     .done(function(users) {
-     $('#user-search-field').empty();
+      $('.chat-group-form-box').empty();
      if (users.length !== 0) {
        users.forEach(function(user){
          var html = appenduser(user);
          $('.chat-group-form-box').append(html);
        });
       }else {
-      $("#user-search-field").empty();
+      $('.chat-group-form-box').empty();
     }
     })
     .fail(function() {
