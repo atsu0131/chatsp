@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180116055413) do
+ActiveRecord::Schema.define(version: 20180222034218) do
 
   create_table "group_users", force: :cascade do |t|
     t.integer  "group_id",   limit: 4

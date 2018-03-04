@@ -28,16 +28,17 @@ body, html,{
 .username-icon{
   display: inline-block;
   float:right;
-  padding:40px;
+  padding:5px;
 }
 .icon-write{
-  display: inline-block;
-  height:50px;
   color:white;
+  display: inline-block;
+  height:1px;
 }
 .icon{
-  color:white;
-  display: inline-block;
+  color: white;
+  float:left;
+  padding:18px 5px 16px 5px;
 }
 .grouplist{
   background-color:$side_blue_light;
@@ -49,6 +50,8 @@ body, html,{
 .group{
   box-sizing: border-box;
   padding: 20px 0 40px;
+  height: 100%;
+  overflow: scroll;
 }
 .group-name{
   color:white;
@@ -86,19 +89,20 @@ body, html,{
 .message{
   font-size:25px;
   padding: 5px 0px 5px 0px;
-  display: flex;
   color: #999;
 }
 .header-left{
   .name1{
-    font-size:20px;
-    padding: 10px 0px 0px 0px;
     width: 100px;
+    color: #333;
+    margin-top: 35px;
+    padding: 40px;
   }
   .name{
     color: #999;
     font-size:12px;
     width: 100px;
+    padding: 40px;
   }
 }
 .header-right{
@@ -111,33 +115,53 @@ body, html,{
 }
 
 .middle{
-  height: 300px;
+  height: 340px;
   background-color:#FAFAFA;
   padding: 10px 40px;
  }
 
-.messages{
+.main-wide{
+  height: 500px;
 }
-  .upper-messages{
-    height:50px;
-    width:350px;
-  }
-  .upper-messages-user{
-  height:10px;
-  float: left;
-  }
 
-  .upper-messages-date{
-    color: #999;
-    font-size: 12px;
-    padding-left: 10px;
-    float:left;
-  }
+.main{
+  overflow: scroll;
+  height: 500px;
+}
 
-  .lower-messages{
-    height:calc(50px - 30px);
+.message-wide{
+  height: 70px;
+  margin-left: 40px;
+  color: #434a54;
+  font-size: 14px;
+  margin-bottom: 10px;
+
+  .upper-message{
+    height:20px;
     width:350px;
+    display: flex;
   }
+    .upper-message__user-name{
+    font-size: 16px;
+    color: #434A54;
+    font-weight: bold;
+    }
+
+    .upper-message__date{
+      margin-left: 10px;
+      color: #999;
+      font-size: 12px;
+      padding-left: 10px;
+    }
+
+  .lower-message{
+    height: 20px;
+     .lower-message__content{
+      font-size: 5px;
+      color:#434A54;
+     }
+   }
+}
 
 .footer{
   height: 100px;
@@ -146,26 +170,28 @@ body, html,{
 }
 .write{
   height: 30px;
-  width: 750px;
+  width: 100%;
   float:left;
-  input{
+  .form__message {
     border: none;
     box-sizing: border-box;
     float:left;
     height: 50px;
-    width:100% ;
+    width: 75% ;
   }
   .form{
     width: 1200px;
   }
-  }
-  .form-icon{
-    background-color: white;
+}
+  .icon-image{
     color: black;
     float:left;
-    padding:10px 20px 16px 20px;
+    padding:18px 10px 16px 30px;
   }
-  .send{
+  .hidden{
+    display: none;
+}
+  .form__submit{
     background-color: #38AEF0;
     border: none;
     color: #fff;
@@ -175,4 +201,5 @@ body, html,{
     margin-left: 15px;
     padding: 0 30px;
     line-height: 50px;
+    width: 15%;
   }

@@ -139,3 +139,49 @@
     font-size: 13px;
   }
 }
+
+.user-search-add{
+  color:blue;
+}
+
+
+.id-result{
+  width:390px;
+}
+
+.name-result{
+  display: inline-block;
+}
+
+.search-result{
+  width: 300px;
+  .name-display{
+    width: 300px;
+    display: inline-block;
+  }
+}
+
+.user-search-remove{
+  color:red;
+}
+
+.chat-group-user__name{
+  width:500px;
+}
+
+.chat-group-user-22{
+      width:370px;
+  display: inline-block;
+  &--current{
+    &:after {
+    clear: both;
+    content: "";
+    display: block;
+    }
+  }
+}
+
+
+
+
+
