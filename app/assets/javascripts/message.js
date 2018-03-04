@@ -51,14 +51,13 @@ $(function(){
     dataType: 'json',
   })
     .done(function(data){
-      data.forEach(function(data){
-      var html = buildHTML(data);
-      $('.main').append(html)
-      $('.textbox').val('')
-      $('.main').animate({scrollTop: $('.main')[0].scrollHeight}, 'fast');
+      console.log(data)
+      var insertHTML = '';
+      json.messages.forEach(function(message){
+        insertHTML += buildHTML(message);
+      });
+      $('main').html(insertHTML);
       })
-    })
-
 
   };
   setInterval(reload, 5000);
