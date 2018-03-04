@@ -1,6 +1,16 @@
 class MessagesController < ApplicationController
     before_action :set_group
 
+
+  def index
+    # ajaxから送られてきたIDを受け取る
+    # DBと見比べて最新（差分）のIDを取得してくる
+    respond_to do |format|
+      format.html
+      format.json{ @new_messages = Message.where(group_id: params[:group_id]).where('id > ?', params[:id]) }
+    end
+  end
+
   def new
     @message = Message.new
     @messages = @group.messages.includes(:user)

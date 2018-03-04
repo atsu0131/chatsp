@@ -7,7 +7,7 @@ $(function(){
    };
    var html = `
      <div class= message-wide >
-     <div class= upper-message id="${message.id}">
+     <div class= upper-message data-message-id="${message.id}">
        <div class= upper-message__user-name >${message.name}</div>
        <div class= upper-message__date >${message.time}</div>
      </div>
@@ -37,4 +37,29 @@ $(function(){
       alert('error');
     })
   })
+
+  function reload() {
+
+  var message_id = $(".message-wide").last().data('id');
+  // 画面に表示されている最新のIDを取得する
+  // console.log(message_id)
+  $.ajax({
+    // IDをcontrollerに送る
+    data: { id: message_id },
+    url: location.href.replace(/\/new/,""),
+    type: 'GET',
+    dataType: 'json',
+  })
+    .done(function(data){
+      data.forEach(function(data){
+      var html = buildHTML(data);
+      $('.main').append(html)
+      $('.textbox').val('')
+      $('.main').animate({scrollTop: $('.main')[0].scrollHeight}, 'fast');
+      })
+    })
+
+
+  };
+  setInterval(reload, 5000);
 });

@@ -4,10 +4,10 @@
 .right-side
   .header
     .header-left
-    %p.name1 グループ名
+    = @group.name
     %p.name Member：
     .header-right
-      %p Edit
+      = link_to "Edit", "/groups/#{current_user.id}/edit", class: "edit-button"
   .main-wide
     .main
       = render @messages

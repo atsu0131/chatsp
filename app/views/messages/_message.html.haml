@@ -1,14 +1,4 @@
-/ .message-wide
-/   .upper-message
-/     %p.upper-message__user-name
-/       = message.user.name
-/     %p.upper-message__date
-/       = message.created_at
-/   - if message.content.present?
-/     %span.lower-message__content
-/       = message.content
-/     = image_tag message.image, class: 'lower-message__image' if message.image.present?
-.message-wide
+.message-wide{"data-id": "#{message.id}"}
   .upper-message
     .upper-message__user-name
       = message.user.name
