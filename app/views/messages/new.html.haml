@@ -4,8 +4,11 @@
 .right-side
   .header
     .header-left
-    = @group.name
-    %p.name Member：
+      = @group.name
+    %p.name
+      Member：
+      - @group.users.each do |user|
+        "#{user.name}"
     .header-right
       = link_to "Edit", "/groups/#{current_user.id}/edit", class: "edit-button"
   .main-wide
